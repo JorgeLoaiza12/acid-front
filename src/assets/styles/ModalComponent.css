@@ -1,0 +1,19 @@
+.weather-icon {
+    font-size: 60px;
+}
+
+.country-property {
+    margin-bottom: 0px;
+}
+
+.container--temperature {
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.container--temperature .temperature {
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+}
