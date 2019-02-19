@@ -1,68 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto creado con: [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Comandos disponibles
 
-In the project directory, you can run:
+Para iniciar el proyecto ejecutar el siguiente comando en la raiz del proyecto:
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este se abrira en modo de desarrollo.<br> [http://localhost:80](http://localhost:80)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Despliegue a produccion con Docker
 
-### `npm test`
+En la raiz del proyecto se debe generar la image que va a contener el proyecto con el siguiente comando:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `docker build -t <Nombre del contenedor Docker> .`
 
-### `npm run build`
+Este ejecutara el archivo Dockerfile el cual generara la carpeta "build" dentro del contenedor para luego ser expuesta con nginx. Para inicializar el contenedor debemos ejecutar el siguiente comando:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `docker build -t <Nombre del contenedor Docker> .`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### `docker run -p <Puerto Externo>:80 <Nombre del contenedor Docker> `
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Ya puesto en marcha se podra visualizar en [http://localhost:<Puerto Externo>](http://localhost:<Puerto Externo>)
