@@ -16,6 +16,6 @@ En la raíz del proyecto se debe generar la imagen Docker que va a contener el p
 
 Este ejecutará el archivo Dockerfile el cual generara la carpeta "build" dentro del contenedor para luego ser expuesta con nginx. Para inicializar el contenedor debemos ejecutar el siguiente comando:
 
-### `docker run -p <Puerto Externo>:80 <Nombre del contenedor Docker> `
+### `docker run -d -p <Puerto Externo>:80 <Nombre del contenedor Docker> `
 
 Ya puesto en marcha se podrá visualizar en [http://localhost:<Puerto Externo>](http://localhost:<Puerto Externo>)
